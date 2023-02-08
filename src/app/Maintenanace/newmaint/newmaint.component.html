@@ -1,0 +1,52 @@
+<div class="container">
+
+
+    <form [formGroup]="maintenaceForm" id="maintenanceForm" (ngSubmit)="onSubmit()">
+
+        <h2>Crear nuevo aviso</h2>
+
+        <label for="tienda">Codigo tienda</label>
+        <select id="tienda" name="tienda" form="maintenanceForm" formControlName="tienda" class="form-select">
+            <!-- <option value="tienda" *ngFor="let store of storesNames">
+                {{store.nombre}}
+            </option> -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+
+        </select>
+
+        <label for="prioridad">Prioridad</label>
+        <select id="prioridad" name="prioridad" form="maintenanceForm" formControlName="prioridad" class="form-select">
+            <option value="normal"> normal </option>
+            <option value="prioritario"> prioritario </option>
+            <option value="urgente"> urgente </option>
+        </select>
+
+        <label for="tipo">Tipo</label>
+        <select id="oficio" name="oficio" form="maintenanceForm" formControlName="oficio" class="form-select">
+            <option value="electrico"> Eléctrico </option>
+            <option value="aire"> Aire Acondicionado </option>
+            <option value="PCI"> Protección contra incendios </option>
+            <option value="fontaneria"> Fontanería </option>
+            <option value="carpinteria"> Carpintería </option>
+            <option value="albañileria"> Albañileria </option>
+            <option value="otro"> Otros </option>
+        </select>
+
+        <label for="description">description</label>
+
+        <textarea name="description" id="description" cols="30" rows="5" formControlName="description"
+            placeholder="trabajos a realiar" class="form-control"></textarea>
+
+
+        <label for="fecha">fecha</label>
+        <input type="date" id="fecha" formControlName="fecha" class="form-control"/>
+
+        <button type="submit" class="btn btn-primary mt-3">Guardar aviso</button>
+
+
+    </form>
+
+</div>
